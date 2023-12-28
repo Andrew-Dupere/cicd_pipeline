@@ -7,7 +7,7 @@ an api endpoint (webhook.py) runs the sync.sh script when a post request is made
 
 make sure the correct port is open for a tcp connection (5000)
 
-host the api using: nohup gunicorn --workers 3 --bind 0.0.0.0:5000 webhook_listener:app &
+host the api using: nohup gunicorn --workers 3 --bind 0.0.0.0:5000 webhook:app &
 
 test the endpoint/payload url using: curl -X POST http:<serverIP>:<PORT>/webhook
 
